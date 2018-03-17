@@ -1,7 +1,7 @@
 # Personal 2018 Study Guide
 
 During 2018 I'd like to revisit core, fundamental computing concepts that I may not get exposure to during my day-to-day programming.
-I'll also take this time to experiment with programming languages that I would like to learn Go and Clojure.
+I'll also take this time to experiment with programming languages that I would like to learn like Go, Rust and Clojure.
 
 This README will serve as a work-in-progress syllabus and checklist for my progress.
 
@@ -13,6 +13,7 @@ This README will serve as a work-in-progress syllabus and checklist for my progr
 
 # Data Structures (practice done via hackerrank)
 - [ ] Stacks https://www.hackerrank.com/domains/data-structures/stacks
+    - [x] Maximum Element https://www.hackerrank.com/challenges/maximum-element/problem
 - [ ] Queues https://www.hackerrank.com/domains/data-structures/queues
 - [ ] Linked Lists https://www.hackerrank.com/domains/data-structures/linked-lists/1
 - [ ] Trees https://www.hackerrank.com/domains/data-structures/trees
