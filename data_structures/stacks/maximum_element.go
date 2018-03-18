@@ -10,12 +10,12 @@ import (
 
 //https://www.hackerrank.com/challenges/maximum-element/problem
 type Instruction struct {
-	instructionType  int64
-	instructionValue int64
+	instructionType  int32
+	instructionValue int32
 }
 
 func main() {
-	var stack []int64
+	var stack []int32
 	scanner := getScanner()
 	for scanner.Scan() {
 		instruction := getNextInstruction(strings.Split(scanner.Text(), " "))
@@ -23,7 +23,7 @@ func main() {
 	}
 }
 
-func parseNextInstruction(instruction Instruction, stack []int64) []int64 {
+func parseNextInstruction(instruction Instruction, stack []int32) []int32 {
 	switch instruction.instructionType {
 	default:
 	case 0:
@@ -53,7 +53,7 @@ func getNextInstruction(input []string) Instruction {
 	}
 }
 
-func readInstruction(input []int64) int64 {
+func readInstruction(input []int32) int32 {
 	if input[0] > 3 {
 		return 0
 	}
@@ -61,7 +61,7 @@ func readInstruction(input []int64) int64 {
 	return input[0]
 }
 
-func readValue(input []int64) int64 {
+func readValue(input []int32) int32 {
 	if len(input) == 1 {
 		return 0
 	}
@@ -69,20 +69,20 @@ func readValue(input []int64) int64 {
 	return input[1]
 }
 
-func MapStringToInt(input []string) []int64 {
-	var output = make([]int64, len(input))
+func MapStringToInt(input []string) []int32 {
+	var output = make([]int32, len(input))
 	for index, value := range input {
-		parsed, err := strconv.ParseInt(value, 10, 64)
+		parsed, err := strconv.ParseInt(value, 10, 32)
 		if err == nil {
-			output[index] = parsed
+			output[index] = int32(parsed)
 		}
 	}
 
 	return output
 }
 
-func MaxValue(input []int64) int64 {
-	var max int64 = 0
+func MaxValue(input []int32) int32 {
+	var max int32 = 0
 	for _, value := range input {
 		if value > max {
 			max = value
